@@ -5,7 +5,10 @@ import com.sun.net.httpserver.*;
 
 public class Http {
   public static void main(String[] args) throws IOException {
-    HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+    Integer port = Integer.parseInt(System.getenv("PORT"));
+    InetSocketAddress socket = new InetSocketAddress(port);
+    HttpServer server = HttpServer.create(socket, 0);
+
     server.createContext("/", new RootHandler());
     server.setExecutor(null);
     server.start();
