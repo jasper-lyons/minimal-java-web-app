@@ -1,0 +1,7 @@
+<!-- The smallest possible Maven POM.xml -->
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>test</groupId>
+  <artifactId>hello-world</artifactId>
+  <version>0.0.0</version>
+</project>
